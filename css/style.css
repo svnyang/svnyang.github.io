@@ -147,10 +147,15 @@ content: "\e746";
 	text-align: center;
 	width: 100%;
 }
-
+.img-margin{
+	margin: .3vw;
+}
 @media screen and (max-width:767px) {
 	.index-wrapper .info-card {
 		margin-top: 70px
+	}
+	.img-margin{
+		margin: .1vw;
 	}
 }
 
