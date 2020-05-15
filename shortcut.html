@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="imgaes/favicon.ico" type="image/x-icon">
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1">
+    <link rel="stylesheet" href="https://valine.js.org/style/bundle-meteor.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,7 +18,11 @@
           <div class="container row">
             <div class="main-list">
               <h1 class="post-title"><a href="" title="IOS12"> <strong>IOS12</strong> 捷径指令&nbsp;-&nbsp;早安</a></h1>
-              <p class="post-date">Apr 16,2019 &nbsp;&nbsp; <span>Read,</span><span id="busuanzi_value_page_pv"></span><span class="copy-con" title="作品版权由SUNYANG 解释">©</span></p>
+              <p class="post-date">Apr 16,2019 &nbsp;&nbsp; <span>Read,</span>
+                <span id="/shortcut.html" class="leancloud_visitors" data-flag-title="文章阅读量统计">
+                  <i class="leancloud-visitors-count"></i>
+                </span>
+                <span class="copy-con" title="作品版权由SUNYANG 解释">©</span></p>
               <h2 id="section" class="head-index"> </h2>
               <p class="MainTitle">使用「快捷指令」App请先把苹果手机系统升级到 iOS12，并在 App Store 下载「快捷指令」APP 。
                 <a href="https://sharecuts.cn/">捷径社区。</a><br>在手机自带Safari浏览器中打开“捷径库”网站，找到所需捷径。<br>点击“获取捷径”，就可以在“捷径”App中使用新添加的捷径了。
@@ -69,7 +74,7 @@
                     </div>
                 </div>
               <!--评论-->
-              <div class="comment"></div>
+              <div id="vcomments"></div>
           </div>
           <!--返回顶部-->
           <i class="fa fa-arrow-up" id="go-up" aria-hidden="true" ></i>
@@ -82,21 +87,20 @@
 <script type="text/javascript" src="js/Fenxiang.js"></script><!--分享代码footer-->
 <script type="text/javascript" src="js/velocity.min.js"></script><!--返回顶部-->
 <script type="text/javascript" src="js/utils.js"></script><!--返回顶部-->
-<script type="text/javascript" async src="js/busuanzi.pure.mini.js"></script><!--计数-->
-<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><!--评论-->
-<script type="text/javascript" src="js/Valine.min.js"></script> <!--计数-->
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script><!--评论-->
 <script>
   new Valine({
-      av: AV, 
-      el: '.comment', 
-      verify: true, // 验证码
+      // av: AV, 
+      el: '#vcomments', 
       app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
       app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
       placeholder: '@SunYang', 
-      avatar:'identicon',
+      avatar:'mp', // 头像
       lang: 'zh-cn',
-      pageSize:'10'
-
+      recordIP:'true', // 是否记录评论者IP
+      visitor: 'true', // 文章访问量统计
+      enableQQ: 'true', // 自动获取QQ昵称和QQ头像
+      pageSize:'10' // 评论列表分页，每页条数
   });
   </script>
 </body>

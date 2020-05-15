@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="imgaes/favicon.ico" type="image/x-icon">
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1">
+    <link rel="stylesheet" href="https://valine.js.org/style/bundle-meteor.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body> 
@@ -17,7 +18,11 @@
           <div class="container row">
             <div class="main-list">
               <h1 class="post-title"><a href="" title="医学app-App">Mega App 生物医疗</a></h1>
-              <p class="post-date"> Jun 18,2019&nbsp;&nbsp; <span>Read,</span><span id="busuanzi_value_page_pv"></span><span class="copy-con" title="作品版权由SUNYANG 解释，禁止匿名转载；禁止商业使用。 临摹作品，同人作品原型版权归原作者所有。">©</span></p>
+              <p class="post-date"> Jun 18,2019&nbsp;&nbsp; <span>Read,</span>
+                <span id="/MegaApp.html" class="leancloud_visitors" data-flag-title="文章阅读量统计">
+                  <i class="leancloud-visitors-count"></i>
+                </span>
+                <span class="copy-con" title="作品版权由SUNYANG 解释，禁止匿名转载；禁止商业使用。 临摹作品，同人作品原型版权归原作者所有。">©</span></p>
               <h2 id="section" class="head-index "></h2>
               <p class="MainTitle">Mega 是一款专业基因检测报告解读、查看基因检测报告等功能性App。</p>
               <ul>
@@ -50,7 +55,7 @@
                     </a>
                   </div>
               </div>
-              <div class="comment"></div><!--评论-->
+              <div id="vcomments"></div><!--评论-->
           </div>
           <!--返回顶部-->
           <i class="fa fa-arrow-up" id="go-up" aria-hidden="true" ></i>
@@ -63,22 +68,20 @@
 <script type="text/javascript" src="js/Fenxiang.js"></script><!--分享代码footer-->
 <script type="text/javascript" src="js/velocity.min.js"></script><!--返回顶部-->
 <script type="text/javascript" src="js/utils.js"></script><!--返回顶部-->
-<script type="text/javascript" async src="js/busuanzi.pure.mini.js"></script><!--计数-->
-<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><!--评论-->
-<script type="text/javascript" src="js/Valine.min.js"></script> <!--计数-->
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script><!--评论-->
 <script>
   new Valine({
-      av: AV, 
-      el: '.comment', 
-      verify: true, 
-      app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', 
-      app_key: 'dTioucSGHIUy0DkUYcXgqloj', 
+      // av: AV, 
+      el: '#vcomments', 
+      app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
+      app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
       placeholder: '@SunYang', 
-      avatar:'identicon',
+      avatar:'mp', // 头像
       lang: 'zh-cn',
-      pageSize:'10',
-      // notify: true,
-      // visitor: true 
+      recordIP:'true', // 是否记录评论者IP
+      visitor: 'true', // 文章访问量统计
+      enableQQ: 'true', // 自动获取QQ昵称和QQ头像
+      pageSize:'10' // 评论列表分页，每页条数
   });
   </script>
 </body>

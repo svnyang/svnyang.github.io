@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="imgaes/favicon.ico" type="image/x-icon">
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1">
+    <link rel="stylesheet" href="https://valine.js.org/style/bundle-meteor.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body> 
@@ -17,7 +18,11 @@
       <div class="container row">
         <div class="main-list">
         <h1 class="post-title"><a href="" title="Github免费搭建个人主页"><strong>Github</strong>免费搭建个人主页</a></h1>
-        <p class="post-date">May 17,2019&nbsp;&nbsp; <span>Read,</span><span id="busuanzi_value_page_pv"></span><span class="copy-con" title="作品版权由SUNYANG 解释">©</span></p>
+        <p class="post-date">May 17,2019&nbsp;&nbsp; <span>Read,</span>
+          <span id="/github.html" class="leancloud_visitors" data-flag-title="文章阅读量统计">
+            <i class="leancloud-visitors-count"></i>
+          </span>
+          <span class="copy-con" title="作品版权由SUNYANG 解释">©</span></p>
         <h2 id="section" class="head-index"></h2>
         <p  class="MainTitle">小白搭建个人主页<br>如有疑问请在下方留言，也可以扫一扫关注小编公众号，页面底部二维码。<br><br>注：Windows与Mac安装Git工具区别，Windows是下载安装，Mac是在终端安装Git。如果英语不是很好可以鼠标右键翻译中文（不是很准确）但也能看明白。防止在终端输入错误可以粘贴我的命令行，看见<del>xingqisan.github.io</del>要替换成你的存储库名称。</p>
         <div class="highlighter-rouge">
@@ -209,7 +214,7 @@
         </div>
     </div>
     <!--评论-->
-    <div class="comment"></div>
+    <div id="vcomments"></div>
 </div>
 
 <!--返回顶部-->
@@ -223,22 +228,21 @@
 <script type="text/javascript" src="js/Fenxiang.js"></script><!--分享代码footer-->
 <script type="text/javascript" src="js/velocity.min.js"></script><!--返回顶部-->
 <script type="text/javascript" src="js/utils.js"></script><!--返回顶部-->
-<script type="text/javascript" async src="js/busuanzi.pure.mini.js"></script><!--计数-->
-<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><!--评论-->
-<script type="text/javascript" src="js/Valine.min.js"></script> <!--计数-->
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script><!--评论-->
 <script>
   new Valine({
-      av: AV, 
-      el: '.comment', 
-      verify: true, // 验证码
+      // av: AV, 
+      el: '#vcomments', 
       app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
       app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
       placeholder: '@SunYang', 
-      avatar:'identicon',
+      avatar:'mp', // 头像
       lang: 'zh-cn',
-      pageSize:'10'
-
+      recordIP:'true', // 是否记录评论者IP
+      visitor: 'true', // 文章访问量统计
+      enableQQ: 'true', // 自动获取QQ昵称和QQ头像
+      pageSize:'10' // 评论列表分页，每页条数
   });
-  </script>
+</script>
 </body>
 </html>
