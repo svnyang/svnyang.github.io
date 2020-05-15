@@ -231,18 +231,21 @@
 <script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script><!--评论-->
 <script>
   new Valine({
-      // av: AV, 
       el: '#vcomments', 
       app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
       app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
       placeholder: '@SunYang', 
+      path: window.location.pathname,
       avatar:'mp', // 头像
       lang: 'zh-cn',
-      recordIP:'true', // 是否记录评论者IP
-      visitor: 'true', // 文章访问量统计
-      enableQQ: 'true', // 自动获取QQ昵称和QQ头像
+      meta: ["nick", "mail", "link"],
+      recordIP:true, // 是否记录评论者IP
+      visitor: true, // 文章访问量统计
+      enableQQ: true, // 自动获取QQ昵称和QQ头像
+      serverURLs: "",
+      requiredFields: [],
       pageSize:'10' // 评论列表分页，每页条数
   });
-</script>
+  </script>
 </body>
 </html>
