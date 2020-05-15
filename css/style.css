@@ -567,7 +567,7 @@ content: "\e746";
 }
 
 .post-wrapper pre {
-	background: #f7f3f7;
+	background: #f7f3f7 ; 
 	padding: 20px 30px 15px;
 	overflow: auto;
 	margin-bottom: 40px;
@@ -575,7 +575,7 @@ content: "\e746";
 	border: 1px solid #eee;
 	color: #b9bdb6;
 	margin-top: -20px;
-	background: linear-gradient(225deg,#333c66 0,#1d2447 100%);
+	background: linear-gradient(225deg,#333c66 0,#1d2447 100%) !important;
     border-radius: 8px;
 }
 
