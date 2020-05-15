@@ -42,7 +42,7 @@
                   </div>
               </div>
              <!--评论-->
-            <div class="comment"></div>
+            <div id="vcomments"></div>
           </div>
         <!--返回顶部-->
       <i class="fa fa-arrow-up" id="go-up" aria-hidden="true" ></i>
@@ -60,8 +60,8 @@
 <script type="text/javascript" src="js/Valine.min.js"></script> <!--计数-->
 <script>
   new Valine({
-      av: AV, 
-      el: '.comment', 
+      // av: AV, 
+      el: '#vcomments', 
       verify: true, // 验证码
       app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
       app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
