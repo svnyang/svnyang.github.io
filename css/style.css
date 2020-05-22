@@ -388,7 +388,7 @@ content: "\e746";
 	color: #7a8b9a;
 	line-height: 1.6;
 	display: -ms-flexbox;
-    display: flex;
+    /* display: flex; */
     margin-top: .75rem;
     font-size: 0.75rem;
     font-weight: 300;
