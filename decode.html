@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>WEB UI 笔记</title>
+    <meta name="author" content="SunYang">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="利用Github免费搭建个人主页,个人网站,设计师,小白搭建个人主页"/>
+    <meta name="description" content="SunYang&#39;s Blog ,设计师网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/imgaes/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/css/bundle-meteor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/css/style.css">
+  </head>
+  <body> 
+  <main class="main-conter">
+    <div class="post-wrapper">
+      <div class="container row">
+        <div class="main-list">
+        <h1 class="post-title"><a href="" title="Github免费搭建个人主页"> <strong>WEB UI</strong> 笔记</a></h1>
+        <p class="post-date">May 17,2019&nbsp;&nbsp; <span>Read,</span>
+          <span id="/people.html" class="leancloud_visitors" data-flag-title="文章阅读量统计">
+            <i class="leancloud-visitors-count"></i>
+          </span>
+          <span class="copy-con" title="作品版权由SUNYANG 解释">©</span></p>
+        <h2 id="section" class="head-index"></h2>
+        <p  class="MainTitle">《破译 WEB UI》 - 笔记</p>
+        <br>
+        <br>
+      <h2 id="section-1">一、页面安全宽度</h2>
+      <p>宽度⼀直是设计中需要重视的⼀个⽅⾯，⽆论是 UI 还是开发，宽度的把控会直接影响整个项⽬。界⾯设计和前端开发都需要保证⽹⻚在某个分辨率下图⽚、⽂字、布局、按钮等元素的正常⽐例和正常显示效果，⽐例不能过宽或过窄，否则容易造成阅读障碍。那么在某个分辨率下，我们使⽤⼀个固定宽度值来作为基准进⾏设计和开发，这个固定值就是安全宽度。</p>
+      <div class="web_table">
+        <p>安全宽度和高度(仅作为参考数据)</p>
+        <table>
+          <tr>
+            <th rowspan="2">分辨率（像素）</th>
+            <th rowspan="2">安全宽度范围（像素）</th>
+            <th colspan="2">推荐值</th>
+          </tr>
+          <tr>
+            <th>宽度（像素）</th>
+            <th>高度（像素）</th>
+          </tr>
+          <tr>
+            <td>1024 × 768</td>
+            <td>980 ～ 1002</td>
+            <td>980</td>
+            <td>548</td>
+          </tr>
+          <tr>
+            <td>1280 × 800</td>
+            <td>1190 ～ 1200</td>
+            <td>1190</td>
+            <td>580</td>
+          </tr>
+          <tr>
+            <td>1366 × 768</td>
+            <td>1200 ～ 1331</td>
+            <td>1200</td>
+            <td>548</td>
+          </tr>
+          <tr>
+            <td>1440 × 900</td>
+            <td>1200 ～ 1405</td>
+            <td>1200 或 1331</td>
+            <td>680</td>
+          </tr>
+          <tr>
+            <td>1920 × 1080</td>
+            <td>1200 ～ 1405</td>
+            <td>1200 或 1331</td>
+            <td>855</td>
+          </tr>
+          <tr>
+            <td>2560 × 1600</td>
+            <td>1689 ～ 1885</td>
+            <td>1689</td>
+            <td>1220</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+                <h5>如果前端开发基于Bootstrap框架，则PC端设计稿的安全宽度如下：</h5>
+                <span>Bootstrap 3.x ：1170像素 <br>Bootstrap 4.x ：1200像素 </span>
+            </td>
+          </tr>
+      </table>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 id="section-1">二、首屏页面的安全高度</h2>
+      <p>首屏高度也可以说是页面的安全高度 这里既然说到安全高度，那必然会涉及图片尺寸。无论是首屏还是第 2 屏、第 3 屏……，都可能用到高清的大尺寸图片，这个图片的高度并不等于首屏高度（768 像素），而是约等于创建 PSD 画布大小时的基本分辨率（1920 像素 ×1080 像素）的高度（1080 像素）。再说直白一点，相当于我们在网页界面看到的图片尺寸是 1920 像素 ×768 像素（实际上这个图是 1920 像素 ×1080 像素）。为了将图片的「主要文字和内容」区域尽可能显示完整，图片的高度才需要控制在 768 像素范围内。这样做的好处是：在不同分辨率的显示屏下，能保证这个大尺寸图片的核心内容不会因为屏幕太矮而被剪裁掉，保证图片的关键信息能够完整地呈现给用户。</p>
+      <div class="web_table">
+        <p>全屏图片尺寸及首屏参考线 (仅作为参考数据)</p>
+        <table>
+          <tr>
+            <th>图片尺寸</th>
+            <th>首屏参考线高度参考值</th>
+            <th>图像可视区、核心内容区安全高度参考值</th>
+            <th>说明</th>
+          </tr>
+          <tr>
+            <td>1280 × 850</td>
+            <td>850</td>
+            <td>620</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1366 × 768</td>
+            <td>768</td>
+            <td>560</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1680 × 1050 <br>1440 × 900 </td>
+            <td>900</td>
+            <td>710</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1920 × 1080 <br>1920 × 1200 </td>
+            <td>1080</td>
+            <td>855</td>
+            <td>常用</td>
+          </tr>
+          <tr>
+            <td>2560 × 1600 <br>1920 × 1200 </td>
+            <td>1600</td>
+            <td>1220</td>
+            <td>常用于 Retina 屏</td>
+          </tr>
+      </table>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 id="section-1">三、网页组成模块</h2>
+      <p>将常见的网页中的基本模块（也可以称为组件）列出来，在设计过程中脑子里一定要有一个框架。通常网页的这些组成模块，在前端开发过程中都需要使用语义化的英文，所以这里列出了中英文对照。</p>
+      <div class="web_table">
+        <p>网页组成模块的中英文</p>
+        <table>
+          <tr>
+            <th>Navigation</th>
+            <th>导航</th>
+          </tr>
+          <tr>
+            <td>Header</td>
+            <td>头部区域、页头</td>
+          </tr>
+          <tr>
+            <td>Body</td>
+            <td>内容主题</td>
+          </tr>
+          <tr>
+            <td>Page Title</td>
+            <td>页面标题</td>
+          </tr>
+          <tr>
+            <td>Breadcrumb Navigation</td>
+            <td>面包屑导航</td>
+          </tr>
+          <tr>
+            <td>Paging Navigation</td>
+            <td>分页</td>
+          </tr>
+          <tr>
+            <td>Page</td>
+            <td>页面标题</td>
+          </tr>
+          <tr>
+            <td>Footer</td>
+            <td>底部区域、页脚</td>
+          </tr>
+          <tr>
+            <td>Logo or ldentity</td>
+            <td>网站标示、网站名称</td>
+          </tr>
+          <tr>
+            <td>Copyright</td>
+            <td>版权声明、版权信息区域</td>
+          </tr>
+          <tr>
+            <td>Banner</td>
+            <td>横幅区、由符号、图形、口号、材质等元素组合而成</td>
+          </tr>
+      </table>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 id="section-1">四、Web 安全字体</h2>
+      <p>安全字体是 Web 设计规范中必须要知晓的一个概念。在设计和开发 Web 时应该确保网站在大多数将要访问的计算机上看起来舒服。大多数用户会使用 Windows 或 Mac 系统来浏览网页两种操作系统都带有预先安装的字体这些字体应该作为网页的首选字体。如果默认的字体无法满足需求应该尽量避免第三方中文字体适当使用第三方英文字体（如 Google Fonts）。如下表展示的是不同的操作系统中预装的常用于 Web 渲染的字体这里没有将过旧版本的系统字体列出。表格仅供参考。</p>
+      <div class="web_table">
+        <p>网页默认常用安全中文字体</p>
+        <table>
+          <tr>
+            <th>Windows 系统</th>
+            <th>MacOS 系统</th>
+          </tr>
+          <tr>
+            <td>微软雅黑：Microsoft YaHei(as of Win7+)</td>
+            <td>苹方：PingFang SC</td>
+          </tr>
+          <tr>
+            <td>黑体：SimHei</td>
+            <td>冬青黑体简体中文：Hiragino Sans GB</td>
+          </tr>
+          <tr>
+            <td>宋体：SimSun</td>
+            <td>华文细黑：STHeiti Light、STXiher</td>
+          </tr>
+          <tr>
+            <td>新宋体：NSimSun</td>
+            <td>华文黑体：STHeiti</td>
+          </tr>
+          <tr>
+            <td>仿宋：FangSong</td>
+            <td>华文楷体：STkaiti</td>
+          </tr>
+          <tr>
+            <td>楷体：KaiTi</td>
+            <td>华文宋体：STSong</td>
+          </tr>
+          <tr>
+            <td>仿宋_GB2312</td>
+            <td>华文仿宋：STFangsong</td>
+          </tr>
+          <tr>
+            <td>楷体_GB2312</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              备注：考虑到前端开发需求，越往上的文字优先级、美观度越高，<br> 低版本操作系统可能会丢失一些美观度较高的字体
+            </td>
+          </tr>
+      </table>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="web_table">
+        <p>网页默认常用安全英文字体</p>
+        <table>
+          <tr>
+            <th>Sans Serif Web Safe Fonts <br>(无衬线安全字体) </th>
+            <th>Serif Web Safe Fonts <br> (衬线安全字体)</th>
+            <th>Monospace Web Safe Fonts <br>(等宽安全字体) </th>
+          </tr>
+          <tr>
+            <td>Helvetica(最安全)</td>
+            <td>Courier</td>
+            <td>Menlo</td>
+          </tr>
+          <tr>
+            <td>Arial</td>
+            <td>Courier New</td>
+            <td>Monaco</td>
+          </tr>
+          <tr>
+            <td>Tahoma</td>
+            <td>Georgia</td>
+            <td>Consolas</td>
+          </tr>
+          <tr>
+            <td>Trebuchet MS</td>
+            <td>Times</td>
+            <td>Courier</td>
+          </tr>
+          <tr>
+            <td>Verdana</td>
+            <td>Times New Roman</td>
+            <td>Courier New</td>
+          </tr>
+          <tr>
+            <td>Arial Black</td>
+            <td>Palatino</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>lmpact</td>
+            <td>Garamond</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Bookman</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              备注：考虑到前端开发需求，越往上的文字优先级、美观度越高，<br> 低版本操作系统可能会丢失一些美观度较高的字体
+            </td>
+          </tr>
+      </table>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="web_table">
+        <p>CSS 常用字体 (font-family) 组合参考</p>
+        <table>
+          <tr>
+            <th>字体类型</th>
+            <th>组合写法</th>
+          </tr>
+          <tr>
+            <td>英文</td>
+            <td>Helvetica Neue","Helvetica",Arial,"sans-serif</td>
+          </tr>
+          <tr>
+            <td>中文</td>
+            <td>"PingFang SC","Hiragino Sans GB","STXiher","Microsoft YaHei","SimSun","Simhei"</td>
+          </tr>
+          <tr>
+            <td>中英文</td>
+            <td>-apple-system,"PingFang SC","Hiragino Sans GB","Helvetica Neue", <br> Arial,"Microsoft YaHei","WenQuanYi Micro Hei","sans-serif"</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              备注：考虑到前端开发需求，越往上的文字优先级、美观度越高，<br> 低版本操作系统可能会丢失一些美观度较高的字体
+            </td>
+          </tr>
+      </table>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>前端中的 CSS 样式指定了字体序列为：-apple-system，「PingFang SC」，「Hiragino Sans GB」，「Helvetica Neue」，Arial，「Microsoft YaHei」，「WenQuanYi Micro Hei」，sans-serif。这意味着在 Mac 系统下网站的中文字体将优先使用系统默认的苹方字体，在 Windows 系统下网站的中文字体将优先使用系统默认的微软雅黑字体。英文字体则优先使用 Helvetica Neue。</p>
+      <div class="highlighter-rouge">
+        <pre class="highlight prettyprint linenums">
+          <ol class="linenums">
+            <li class="L1"><code><span class="com">font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Helvetica Neue",Arial,"Microsoft YaHei","WenQuanYi Micro Hei","sans-serif"</span></code></li>
+          </ol>
+        </pre>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 id="section-1">五、图片命名格式参考</h2>
+      <p>Web 的前后端开发，都需要使用语义化的英文，便于维护和理解。那么我们在设计 UI 界面时，也需要对图层、文件和文件夹命名，下面，列出一些常见的条目给大家做参考。</p>
+      <p>people.jpg——单一词汇</p>
+      <p>people-boy.jpg——复合词</p>
+      <p>people-school-boy.jpg——复合词 + 属性</p>
+      <p>people-job-boy.jpg——复合词 + 属性</p>
+      <p>people-job-boy-f.jpg——复合词 + 一级属性 + 二级属性</p>
+      <p>people-job-boy-b.jpg——复合词 + 一级属性 + 二级属性</p>
+      <p>people@2x.jpg——Retina 图片两倍大小原图</p>
+      <p>people@3x.jpg——3 倍大小原图</p>
+      <p>people_boy.jpg——复合词(使用下划线)</p>
+      <p>people_school_boy.jpg——复合词 + 属性(使用下划线)</p>
+      <p>people_job_boy.jpg——复合词 + 属性(使用下划线)</p>
+      <p>people-school_boy.jpg——复合词 + 属性(使用下划线和横杆)</p>
+      <p>people-job_boy.jpg——复合词 + 属性(使用下划线和横杆)</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 id="section-1">六、常见文件夹命名参考</h2>
+      <p>assets——网站资源（images、css、js、fonts 文件夹也可以放在此文件夹中）</p>
+      <p>images——图片</p>
+      <p>img——图片</p>
+      <p>fonts——字体</p>
+      <p>icons——图标</p>
+      <p>css——CSS 样式</p>
+      <p>sass——SASS 样式</p>
+      <p>js——脚本文件</p>
+      <p>core——核心文件</p>
+      <p>functions——功能文件</p>
+      <p>themes——主题</p>
+      <p>plug-ins——插件</p>
+      <p>admin——后台管理</p>
+      <p>documentation——说明文档</p>
+      <p>licensing——许可证</p>
+      <p>demo——演示</p>
+      <br>
+      <br>
+      <br>
+    <!--创作工具-分享-->
+    <div class="post-box">
+        <div class="post-text">
+          <span>Web UI</span>
+        </div>
+        <div class="post-right">
+          <a class="post-action QQ"  href="javascript:void(0)" onclick="shareToQzone(event)">
+            <span class="iconfont icon-qq"></span>
+          </a>
+          <a class="post-action weobo"  href="javascript:void(0)" onclick="shareToSinaWB(event)">
+            <span class=" iconfont icon-weibo"></span>
+          </a>
+          <a  class="post-action weixin" href="javascript:void(0)" onclick="shareToWeChat(event)">
+            <span class="iconfont icon-weixin"></span>
+          </a>
+        </div>
+    </div>
+    <!--评论-->
+    <div id="vcomments"></div>
+</div>
+
+<!--返回顶部-->
+<i class="fa fa-arrow-up" id="go-up" aria-hidden="true" ></i>
+</div>
+</div>    
+<div class="footer"></div>
+</main>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/js/qrcode.min.js"></script><!--二维码-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/js/Fenxiang.js"></script><!--分享代码footer-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/js/velocity.min.js"></script><!--返回顶部-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io/js/utils.js"></script><!--返回顶部-->
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script><!--评论-->
+<script>
+  new Valine({
+      el: '#vcomments', 
+      app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
+      app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
+      placeholder: '@SunYang \n在昵称中留下QQ号（系统自动获取QQ昵称、QQ邮箱、QQ头像等信息) 以便收到回复。', 
+      path: window.location.pathname,
+      avatar:'mp', // 头像
+      lang: 'zh-cn',
+      meta: ["nick", "mail", "link"],
+      recordIP:true, // 是否记录评论者IP
+      visitor: true, // 文章访问量统计
+      enableQQ: true, // 自动获取QQ昵称和QQ头像
+      serverURLs: "",
+      requiredFields: [],
+      pageSize:'10' // 评论列表分页，每页条数
+  });
+  </script>
+</body>
+</html>
