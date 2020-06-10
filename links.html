@@ -262,6 +262,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 col-md-3">
+                    <div class="rotating-card-container mb-5">
+                        <div class="card shadow-soft border-light card-rotate p-5">
+                            <div class="front text-center">
+                                <div class="profile-image shadow-inset border border-light bg-primary p-3 rounded-circle mt-4">
+                                    <img src="https://jinan6.vip/img/avatar.png" class="card-img-top shadow-soft p-2 border border-light rounded-circle" alt="img">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Sakura` Blogs</h3>
+                                    <span class="h8 font-weight-normal text-gray">个人小站</span>
+                                    <span class="h8 font-weight-normal text-gray">&ensp; &ensp; &ensp; </span>
+                                </div>
+                            </div>
+                            <div class="back text-center">
+                                <div class="card-body p-5">
+                                    <p class="card-text"></p>
+                                    <a class="btn btn-sm btn-primary" href="https://jinan6.vip">
+                                        <span class="fas fa-user-plus mr-1"></span>GO
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -298,16 +322,16 @@
       el: '#vcomments', 
       app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
       app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
-      placeholder: '@SunYang \n在昵称中留下QQ号（系统自动获取QQ昵称、QQ邮箱、QQ头像等信息) 以便收到回复。', 
+      placeholder: '@SunYang \n在昵称中留下QQ号（系统自动获取QQ昵称（必填）、QQ邮箱（必填）、QQ头像等信息) 以便收到回复。', 
       path: window.location.pathname,
-      avatar:'mp', // 头像
+      avatar:'identicon', // 头像
       lang: 'zh-cn',
       meta: ["nick", "mail", "link"],
       recordIP:true, // 是否记录评论者IP
       visitor: true, // 文章访问量统计
       enableQQ: true, // 自动获取QQ昵称和QQ头像
       serverURLs: "",
-      requiredFields: [],
+      requiredFields: ['nick'],
       pageSize:'10' // 评论列表分页，每页条数
   });
   </script>
