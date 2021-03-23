@@ -1,6 +1,6 @@
 
   function shareToWeChat(event){
-   $('.main-conter').append(
+   $('.WeChat').append(
     '<div class="bounced-main">'+
       '<div class="bounced-box">'+   
           '<div class="bounced-content">'+ 
@@ -50,4 +50,30 @@
         _shareUrl += '&pics=' + $(".picPng").attr("src");    
         window.open(_shareUrl,'_blank');
   }
+  new Valine({
+    el: '#vcomments', 
+    app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
+    app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
+    master: 'd65bb3695502d69d2103c6a9dbf63b54',
+    tagMeta: ["博主","小伙伴","访客"],
+    friends:'d87c947f01bbcf3e2ba83a3d1ea05d17',
+    placeholder: '@SunYang \n在昵称中留下QQ号（系统自动获取QQ昵称、QQ邮箱、QQ头像等信息) 以便收到回复。', 
+    path: window.location.pathname,
+    avatar:'wavatar', // 头像
+    lang: 'zh-cn',
+    recordIP:true, // 是否记录评论者IP
+    visitor: true, // 文章访问量统计
+    enableQQ: true, // 自动获取QQ昵称和QQ头像
+    serverURLs: "",
+    pageSize:'10', // 评论列表分页，每页条数
+    metaPlaceholder: {"nick":"昵称/QQ号（必填）","mail":"邮箱（必填）"},
+});
+var strUrl=window.location.href;
+var arrUrl=strUrl.split("/");
+var strPage=arrUrl[arrUrl.length-1];
+$('.leancloud_visitors').attr('id','/'+strPage);
+
   $('.footer').load('footer.html');
+
+    //添加title
+    document.title = $('#title').text();
