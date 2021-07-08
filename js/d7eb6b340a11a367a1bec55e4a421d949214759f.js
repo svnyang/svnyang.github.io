@@ -2,7 +2,7 @@ $(function () {
     function get_info() {
         var data;
         $.ajax({
-            url: 'js/05d97e6e9834ccf063c552e404b9ecafc5e4d662.json',
+            url: 'https://cdn.jsdelivr.net/gh/svnyang/svnyang.github.io@master/js/05d97e6e9834ccf063c552e404b9ecafc5e4d662.json',
             type: 'GET',
             dataType: "json",
             async: false,
